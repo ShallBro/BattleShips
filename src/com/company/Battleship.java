@@ -2,7 +2,7 @@ package com.company;
 
 
 import java.util.Scanner;
-import java.util.Random;
+
 
 public class Battleship {
     static String player1;
@@ -68,7 +68,8 @@ public class Battleship {
         if (b < 5) {
             if (!p && m) {
                 x = 1;
-            } else d = 2;
+            }
+            d = 2;
         }
         if (z + x + d == 3) {
             itog = false;
