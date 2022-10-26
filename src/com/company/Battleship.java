@@ -18,6 +18,7 @@ public class Battleship {
     public static void main(String[] args) {
         int min = -200;
         int max = 200;
+        // Перебираем значения до тех пор пока не произойдет сбой
         while (true) {
             double a = (int) (Math.random() * ((max - min) + 1)) + min;
             double b = (int) (Math.random() * ((max - min) + 1)) + min;
@@ -48,6 +49,7 @@ public class Battleship {
         }
     }
 
+    // Фазер
     public static boolean testFunctions(double a, double b, double c) {
         int z = 0;
         int x = 0;
