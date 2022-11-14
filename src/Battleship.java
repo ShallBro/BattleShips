@@ -1,6 +1,3 @@
-package com.company;
-
-
 import java.util.Scanner;
 
 
@@ -19,17 +16,6 @@ public class Battleship {
         int min = -200;
         int max = 200;
         // Перебираем значения до тех пор пока не произойдет сбой
-        while (true) {
-            double a = (int) (Math.random() * ((max - min) + 1)) + min;
-            double b = (int) (Math.random() * ((max - min) + 1)) + min;
-            double c = (int) (Math.random() * ((max - min) + 1)) + min;
-            System.out.println(a);
-            System.out.println(b);
-            System.out.println(c);
-            if (!testFunctions(a, b, c)){
-                break;
-            }
-        }
         System.out.println("Player1 enter your name");
         player1 = scanner.nextLine();
         System.out.println("Player2 enter your name");
@@ -49,36 +35,6 @@ public class Battleship {
         }
     }
 
-    // Фазер
-    public static boolean testFunctions(double a, double b, double c) {
-        int z = 0;
-        int x = 0;
-        int d = 0;
-        boolean p;
-        boolean m;
-        boolean itog;
-        if (a == 0) {
-            p = false;
-        } else p = true;
-        if (c == 0) {
-            m = false;
-        } else m = true;
-
-        if (p) {
-            z = -2;
-        }
-        if (b < 5) {
-            if (!p && m) {
-                x = 1;
-            }
-            d = 2;
-        }
-        if (z + x + d == 3) {
-            itog = false;
-        } else itog = true;
-        assert itog;
-        return itog;
-    }
 
     // placeShips - расстановка кораблей
     public static void placeships(String player, int[][] battlefield) {
